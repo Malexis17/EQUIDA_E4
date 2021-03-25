@@ -104,10 +104,10 @@
                     <br> <label for="PERE">PERE</label>
                     <%
                         
-                        if (unCheval.getUnPere().getId() != 999){
+                        if (unCheval.getUnPere().getId() != 1 && unCheval.getUnPere().getId() != 2){
                             out.println("<a href ='../ServletCheval/infoCheval?idCheval="+ unCheval.getUnPere().getId()+ "'>");
                         out.println(unCheval.getUnPere().getNom());
-                        out.println("");
+                        out.println("</a>");
                         }
                         else{
                         out.println("");
@@ -117,10 +117,10 @@
                     %> 
                     <br> <label for="MERE">MERE</label>
                     <%
-                        if (unCheval.getUneMere().getId() != 999){
+                        if (unCheval.getUneMere().getId() != 1 && unCheval.getUneMere().getId() !=2){
                             out.println("<a href ='../ServletCheval/infoCheval?idCheval="+ unCheval.getUneMere().getId()+ "'>");
                         out.println(unCheval.getUneMere().getNom());
-                        out.println("");
+                        out.println("</a>");
                         }
                         else{
                         out.println("");
