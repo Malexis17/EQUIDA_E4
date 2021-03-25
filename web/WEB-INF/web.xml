@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>pilotejdbc</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>urlconnexionjdbc</param-name>
+        <param-value>jdbc:mysql://172.20.0.241:3306/ERROR500</param-value>
+    </context-param>
+    <context-param>
+        <param-name>utilisateurjdbc</param-name>
+        <param-value>ADM_ERROR500</param-value>
+    </context-param>
+    <context-param>
+        <param-name>motdepassejdbc</param-name>
+        <param-value>mpError500</param-value>
+    </context-param>
+    <!--  écouteurs -->
+    <listener>
+        <listener-class>database.InitConnexion</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ServletVentes</servlet-name>
+        <servlet-class>servlets.ServletVentes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletClient</servlet-name>
+        <servlet-class>servlets.ServletClient</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ServletCheval</servlet-name>
+        <servlet-class>servlets.ServletCheval</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ServletAdmin</servlet-name>
+        <servlet-class>servlets.ServletAdmin</servlet-class>
+
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ServletPays</servlet-name>
+        <servlet-class>servlets.ServletPays</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ServletVentes</servlet-name>
+        <url-pattern>/ServletVentes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletVentes</servlet-name>
+        <url-pattern>/ServletVentes/listerLesVentes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletVentes</servlet-name>
+        <url-pattern>/ServletVentes/listerLesClients</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletVentes</servlet-name>
+        <url-pattern>/ServletVentes/listerLesCourriels</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletVentes</servlet-name>
+        <url-pattern>/ServletVentes/listerLesLots</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/listerLesPays</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletClient</servlet-name>
+        <url-pattern>/ServletClient/ajouterClient</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>ServletCheval</servlet-name>
+        <url-pattern>/ServletCheval</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCheval</servlet-name>
+        <url-pattern>/ServletCheval/infoCheval</url-pattern>
+    </servlet-mapping>
+  
+    <servlet-mapping>
+        <servlet-name>ServletCheval</servlet-name>
+        <url-pattern>/ServletCheval/ajouterCheval</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ServletCheval</servlet-name>
+        <url-pattern>/ServletCheval/consulterCheval</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ServletCheval</servlet-name>
+        <url-pattern>/ServletCheval/modifierCheval</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/ajouterCategVente</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/consulterCategVente</url-pattern>
+
+    </servlet-mapping>
+       <servlet-mapping>
+            <servlet-name>ServletAdmin</servlet-name>
+            <url-pattern>/ServletAdmin/AjouterLieu</url-pattern>
+    </servlet-mapping>
+       <servlet-mapping>
+            <servlet-name>ServletAdmin</servlet-name>
+            <url-pattern>/ServletAdmin/LieuConsulter</url-pattern>
+    </servlet-mapping>
+      <servlet-mapping>
+            <servlet-name>ServletAdmin</servlet-name>
+            <url-pattern>/ServletAdmin/ajouterPays</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>ServletAdmin</servlet-name>
+            <url-pattern>/ServletAdmin/consulterPays</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>ServletAdmin</servlet-name>
+            <url-pattern>/ServletAdmin/modifierPays</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/listerLesLieux</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/lieuModifier</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+         <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/supprimerLieu</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+         <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/listerLesCategVente</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+         <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin/categVenteModifier</url-pattern>
+    </servlet-mapping>
+    
+    
+<session-config>
+
+    <session-timeout>
+        30
+    </session-timeout>
+</session-config>
+</web-app>
