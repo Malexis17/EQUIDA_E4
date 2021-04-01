@@ -65,8 +65,8 @@
     </center>
     <center>
         <form class="form-inline" action="AjouterLieu" method="POST">
-                <label for="id">ID  </label>
-                <input id="id" type="text" name="id"  size="30" maxlength="3">
+                <!--<label for="id">ID  </label>
+                <input id="id" type="text" name="id"  size="30" maxlength="3">-->
                 </br>
             <label for="ville">VILLE  </label>
                 <input id="ville" type="text" name="ville"  size="50" maxlength="50">

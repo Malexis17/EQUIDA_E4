@@ -66,7 +66,7 @@
         %>
         
         <table class="table table-bordered table-striped table-condensed">
-            <tr><td>Id :</td><td><% out.println(unLieu.getId());%></td></tr>
+          <!--  <tr><td>Id :</td><td>//<//% out.println(unLieu.getId());%></td></tr>-->
             <tr><td>Ville :</td><td><%  out.println(unLieu.getVille());%></td>  </tr>
                 <tr><td>NbBoxes:</td><td><%  out.println(unLieu.getNbBoxes());%></td>  </tr>
                 <tr><td>Commentaire:</td><td><%  out.println(unLieu.getCommentaires());%></td> </tr>
