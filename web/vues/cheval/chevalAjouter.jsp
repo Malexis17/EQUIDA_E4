@@ -51,7 +51,7 @@
           <a class="dropdown-item" href="../ServletAdmin/listerLesCategVente">Lister Les CategVentes</a>
         </div>
       </li>
-      </li>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Ajouter
@@ -94,7 +94,7 @@
                 
                 
                 <label for="typeCheval">TYPE DE CHEVAL </label>
-                <select class="TypeCheval" name="typeCheval" size="5">
+                <select name="typeCheval" size="5">
                 <%
                         ArrayList<TypeCheval> lesTypesChevaux = (ArrayList)request.getAttribute("pLesTypesChevaux");
                         for (int i=0; i<lesTypesChevaux.size();i++){

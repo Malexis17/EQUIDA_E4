@@ -109,6 +109,7 @@ public class ChevalDAO {
             
             requete=connection.prepareStatement("INSERT INTO cheval ( sire, nom, sexe, idType, Père, Mère, idClient)\n" +
                     "VALUES (?,?,?,?,?,?,?)", requete.RETURN_GENERATED_KEYS );
+            System.out.println(requete);
             requete.setString(1, unCheval.getSire());
             requete.setString(2, unCheval.getNom());
             requete.setString(3, unCheval.getSexe());

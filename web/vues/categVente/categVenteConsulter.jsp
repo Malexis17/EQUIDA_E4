@@ -38,8 +38,8 @@
           Listes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="ServletVentes/listerLesVentes">Lister Les Ventes</a>
-          <a class="dropdown-item" href="ServletAdmin/listerLesLieux">Lister Les Lieux</a>
+          <a class="dropdown-item" href="../ServletVentes/listerLesVentes">Lister Les Ventes</a>
+          <a class="dropdown-item" href="../ServletAdmin/listerLesLieux">Lister Les Lieux</a>
           <a class="dropdown-item" href="../ServletAdmin/listerLesPays">Lister Les Pays</a>
           <a class="dropdown-item" href="../ServletAdmin/listerLesCategVente">Lister Les CategVentes</a>
         </div>
@@ -50,11 +50,11 @@
           Ajouter
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="ServletClient/ajouterClient">Ajouter Client</a>
-          <a class="dropdown-item" href="ServletCheval/ajouterCheval">Ajouter Cheval</a>
-          <a class="dropdown-item" href="ServletAdmin/ajouterCategVente">Ajouter Catégorie</a>
-          <a class="dropdown-item" href="ServletAdmin/AjouterLieu">Ajouter Lieu</a>
-          <a class="dropdown-item" href="ServletAdmin/ajouterPays">Ajouter Pays</a>
+          <a class="dropdown-item" href="../ServletClient/ajouterClient">Ajouter Client</a>
+          <a class="dropdown-item" href="../ServletCheval/ajouterCheval">Ajouter Cheval</a>
+          <a class="dropdown-item" href="../ServletAdmin/ajouterCategVente">Ajouter Catégorie</a>
+          <a class="dropdown-item" href="../ServletAdmin/AjouterLieu">Ajouter Lieu</a>
+          <a class="dropdown-item" href="../ServletAdmin/ajouterPays">Ajouter Pays</a>
         </div>
       </li>
     </ul>

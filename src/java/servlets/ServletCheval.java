@@ -175,7 +175,16 @@ public class ServletCheval extends HttpServlet {
                    // il y a des erreurs. On réaffiche le formulaire avec des messages d'erreurs
                ArrayList<Client> lesClients = ClientDAO.getLesClients(connection);
                request.setAttribute("pLesClients", lesClients);
-
+               
+               ArrayList<TypeCheval> lesTypesChevaux = TypeChevalDAO.getLesTypesChevaux(connection);
+               request.setAttribute("pLesTypesChevaux",lesTypesChevaux);
+               
+               ArrayList<Cheval> lesChevauxPeres= ChevalDAO.getLesChevauxMales(connection);
+               request.setAttribute("pLesChevauxMales", lesChevauxPeres);
+               
+               ArrayList<Cheval> lesChevauxMeres = ChevalDAO.getLesChevauxFemelles(connection);
+               request.setAttribute("pLesChevauxFemelles", lesChevauxMeres);
+               
 
               this.getServletContext().getRequestDispatcher("/vues/cheval/chevalAjouter.jsp" ).forward( request, response );
            }
