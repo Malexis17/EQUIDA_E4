@@ -88,7 +88,8 @@
                 <input id="commentaire"  type="text"  name="commentaire" size="30" maxlength="30" value="<%out.println(leLieu.getCommentaires());%>" readonly>      
                  </br>
 
-               <input type="submit" name="valider" id="valider" value="Valider"/>
+                
+               <input type="submit" name="valider" id="valider" value="Valider" />
             </form>
     </body>
     <footer class="footer-distributed">

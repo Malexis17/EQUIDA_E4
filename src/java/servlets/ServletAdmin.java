@@ -151,6 +151,8 @@ public class ServletAdmin extends HttpServlet {
                   System.out.println("CategVente= "+ uneCategVente.getLibelle());
              this.getServletContext().getRequestDispatcher("/vues/categVente/categVenteModifier.jsp").forward(request, response);
          }
+         
+      
        
     }
     
@@ -205,6 +207,8 @@ public class ServletAdmin extends HttpServlet {
            if (form.getErreurs().isEmpty()){
                // Il n'y a pas eu d'erreurs de saisie, donc on renvoie la vue affichant les infos du client 
                CategVenteDAO.ajouterCategVente(connection, uneCategVente);
+               ArrayList<Lieu> lesLieux = LieuDAO.getLesLieux(connection);
+          request.setAttribute("pLesLieux", lesLieux);
                this.getServletContext().getRequestDispatcher("/vues/categVente/categVenteConsulter.jsp" ).forward( request, response );
            }
            else
@@ -213,6 +217,10 @@ public class ServletAdmin extends HttpServlet {
 
 
            }
+           
+        
+           
+           
         }
 
         
@@ -309,7 +317,8 @@ public class ServletAdmin extends HttpServlet {
            if (form.getErreurs().isEmpty()){
                // Il n'y a pas eu d'erreurs de saisie, donc on renvoie la vue affichant les infos du client 
                LieuDAO.supprimerLieu(connection, unLieu);
-             
+              
+
            }
            else
            { 
@@ -318,6 +327,16 @@ public class ServletAdmin extends HttpServlet {
 
            }
         }
+         
+           if(url.equals("/ERROR500/ServletAdmin/supprimerLieu"))
+       {
+          ArrayList<Lieu> lesLieux = LieuDAO.getLesLieux(connection);
+          request.setAttribute("pLesLieux", lesLieux);
+           getServletContext().getRequestDispatcher("/vues/Lieu/listerLesLieux.jsp").forward(request, response);
+       }
+         
+         
+         
          
          if(url.equals("/ERROR500/ServletAdmin/categVenteModifier")){
 
