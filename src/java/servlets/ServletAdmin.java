@@ -83,24 +83,24 @@ public class ServletAdmin extends HttpServlet {
             throws ServletException, IOException {
         String url = request.getRequestURI();
        
-       if(url.equals("/ERROR500/ServletAdmin/ajouterCategVente"))
+       if(url.equals("/equida_Alexis/ServletAdmin/ajouterCategVente"))
         {     
           this.getServletContext().getRequestDispatcher("/vues/categVente/categVenteAjouter.jsp" ).forward( request, response );
         }
 
        
-       if(url.equals("/ERROR500/ServletAdmin/AjouterLieu"))
+       if(url.equals("/equida_Alexis/ServletAdmin/AjouterLieu"))
        {
       this.getServletContext().getRequestDispatcher("/vues/Lieu/AjouterLieu.jsp" ).forward( request, response );
        
        }
 
-       if(url.equals("/ERROR500/ServletAdmin/ajouterPays"))
+       if(url.equals("/equida_Alexis/ServletAdmin/ajouterPays"))
         {     
           this.getServletContext().getRequestDispatcher("/vues/pays/paysAjouter.jsp" ).forward( request, response );
         }
        
-       if(url.equals("/ERROR500/ServletAdmin/modifierPays"))
+       if(url.equals("/equida_Alexis/ServletAdmin/modifierPays"))
         {
           String code = (String)request.getParameter("code");
           Pays unPays = PaysDAO.getLePays(connection,code);
@@ -108,21 +108,21 @@ public class ServletAdmin extends HttpServlet {
           this.getServletContext().getRequestDispatcher("/vues/pays/paysModifier.jsp" ).forward( request, response );
         }
        
-       if(url.equals("/ERROR500/ServletAdmin/listerLesPays"))
+       if(url.equals("/equida_Alexis/ServletAdmin/listerLesPays"))
         {  
             ArrayList<Pays> lesPays = PaysDAO.getLesPays(connection);
             request.setAttribute("pLesPays", lesPays);
             getServletContext().getRequestDispatcher("/vues/pays/listerLesPays.jsp").forward(request, response);
         }
        
-        if(url.equals("/ERROR500/ServletAdmin/listerLesLieux"))
+        if(url.equals("/equida_Alexis/ServletAdmin/listerLesLieux"))
        {
           ArrayList<Lieu> lesLieux = LieuDAO.getLesLieux(connection);
           request.setAttribute("pLesLieux", lesLieux);
            getServletContext().getRequestDispatcher("/vues/Lieu/listerLesLieux.jsp").forward(request, response);
        }
        
-         if(url.equals("/ERROR500/ServletAdmin/lieuModifier")){
+         if(url.equals("/equida_Alexis/ServletAdmin/lieuModifier")){
            String id = (String)request.getParameter("idLieu");
            Lieu unLieu= LieuDAO.getleLieu(connection, id);
            request.setAttribute("pLeLieu", unLieu);
@@ -130,7 +130,7 @@ public class ServletAdmin extends HttpServlet {
            this.getServletContext().getRequestDispatcher("/vues/Lieu/lieuModifier.jsp").forward(request, response);
        }
           
-         if(url.equals("/ERROR500/ServletAdmin/supprimerLieu"))
+         if(url.equals("/equida_Alexis/ServletAdmin/supprimerLieu"))
         {
           String id = (String)request.getParameter("idLieu");
           Lieu unLieu = LieuDAO.getleLieu(connection,id);
@@ -138,13 +138,13 @@ public class ServletAdmin extends HttpServlet {
           this.getServletContext().getRequestDispatcher("/vues/Lieu/supprimerLieu.jsp" ).forward( request, response );
         }
          
-         if(url.equals("/ERROR500/ServletAdmin/listerLesCategVente")){
+         if(url.equals("/equida_Alexis/ServletAdmin/listerLesCategVente")){
              ArrayList<CategVente> lesCategVente = CategVenteDAO.getLesCategVentes(connection);
              request.setAttribute("pLesCategVente", lesCategVente);
              getServletContext().getRequestDispatcher("/vues/categVente/listerLesCategVente.jsp").forward(request, response);
          }
 
-         if(url.equals("/ERROR500/ServletAdmin/categVenteModifier")){
+         if(url.equals("/equida_Alexis/ServletAdmin/categVenteModifier")){
              String id = (String)request.getParameter("codeCategVente");
              CategVente uneCategVente = CategVenteDAO.getuneCategVente(connection, id);
              request.setAttribute("plaCategVente", uneCategVente);
@@ -172,7 +172,7 @@ public class ServletAdmin extends HttpServlet {
        
          String url = request.getRequestURI();
         
-         if(url.equals("/ERROR500/ServletAdmin/AjouterLieu")){
+         if(url.equals("/equida_Alexis/ServletAdmin/AjouterLieu")){
             LieuForm form = new LieuForm();
 
          Lieu unLieu = form.AjouterLieu(request);
@@ -192,7 +192,7 @@ public class ServletAdmin extends HttpServlet {
           }
         
          }
-        if(url.equals("/ERROR500/ServletAdmin/ajouterCategVente")){
+        if(url.equals("/equida_Alexis/ServletAdmin/ajouterCategVente")){
 
             /* Préparation de l'objet formulaire */
            CategVenteForm form = new CategVenteForm();
@@ -226,7 +226,7 @@ public class ServletAdmin extends HttpServlet {
         
 
 
-        if(url.equals("/ERROR500/ServletAdmin/ajouterPays")){
+        if(url.equals("/equida_Alexis/ServletAdmin/ajouterPays")){
 
             /* Préparation de l'objet formulaire */
            PaysForm form = new PaysForm();
@@ -251,7 +251,7 @@ public class ServletAdmin extends HttpServlet {
            }
         }
         
-        if(url.equals("/ERROR500/ServletAdmin/modifierPays")){
+        if(url.equals("/equida_Alexis/ServletAdmin/modifierPays")){
 
             /* Préparation de l'objet formulaire */
            PaysForm form = new PaysForm();
@@ -276,7 +276,7 @@ public class ServletAdmin extends HttpServlet {
            }
         }
         
-         if(url.equals("/ERROR500/ServletAdmin/lieuModifier")){
+         if(url.equals("/equida_Alexis/ServletAdmin/lieuModifier")){
                      /* Préparation de l'objet formulaire */
                      LieuForm form = new LieuForm();
                     
@@ -302,7 +302,7 @@ public class ServletAdmin extends HttpServlet {
           
           }
          
-         if(url.equals("/ERROR500/ServletAdmin/supprimerLieu")){
+         if(url.equals("/equida_Alexis/ServletAdmin/supprimerLieu")){
 
             /* Préparation de l'objet formulaire */
            LieuForm form = new LieuForm();
@@ -328,7 +328,7 @@ public class ServletAdmin extends HttpServlet {
            }
         }
          
-           if(url.equals("/ERROR500/ServletAdmin/supprimerLieu"))
+           if(url.equals("/equida_Alexis/ServletAdmin/supprimerLieu"))
        {
           ArrayList<Lieu> lesLieux = LieuDAO.getLesLieux(connection);
           request.setAttribute("pLesLieux", lesLieux);
@@ -338,7 +338,7 @@ public class ServletAdmin extends HttpServlet {
          
          
          
-         if(url.equals("/ERROR500/ServletAdmin/categVenteModifier")){
+         if(url.equals("/equida_Alexis/ServletAdmin/categVenteModifier")){
 
             /* Préparation de l'objet formulaire */
            CategVenteForm form = new CategVenteForm();

@@ -86,7 +86,7 @@ public class ServletClient extends HttpServlet {
         
        String url = request.getRequestURI();
        
-       if(url.equals("/ERROR500/ServletClient/ajouterClient"))
+       if(url.equals("/equida_Alexis/ServletClient/ajouterClient"))
         {                   
             ArrayList<Pays> lesPays = PaysDAO.getLesPays(connection);
             request.setAttribute("pLesPays", lesPays);

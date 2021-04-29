@@ -69,11 +69,11 @@
         <center>
         <form class="form-inline" action="ajouterPays" method="POST">
                 <label for="code">CODE  </label>
-                <input id="code" type="text" name="code"  size="30" maxlength="3">
+                <input id="code" type="text"  name="code"  size="30" maxlength="3" required="required">
                 </br>
                 
                 <label for="nom">NOM  </label>
-                <input id="nom"  type="text"  name="nom" size="30" maxlength="30">      
+                <input id="nom"  type="text"  name="nom" size="30" maxlength="30" required="required">      
                  </br>
 
                 <input class="button" type="submit" name="valider" id="valider" value="Valider"/>

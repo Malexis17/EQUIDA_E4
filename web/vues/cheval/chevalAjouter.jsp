@@ -79,22 +79,22 @@
         <form class="form-inline" action="ajouterCheval" method="POST">
             <center>
                 <label for="nom">NOM </label>
-                <input id="nom" type="text" name="nom"  size="30" maxlength="40">
+                <input id="nom" type="text" name="nom"  size="30" maxlength="40" required="required">
                 </br>
                 
                 <label for="sire">SIRE </label>
-                <input id="sire"  type="text"  name="sire" size="30" maxlength="13">
+                <input id="sire"  type="text"  name="sire" size="30" maxlength="13" required="required">
                  </br>
                  
                 <label for="sexe">SEXE </label>
-                <select name="sexe" size="2">
+                <select name="sexe" size="2" required="required">
                     <option value ="M">M</option>
                     <option value ="F">F</option>
                 </select>     
                 
                 
                 <label for="typeCheval">TYPE DE CHEVAL </label>
-                <select name="typeCheval" size="5">
+                <select name="typeCheval" size="5" required="required">
                 <%
                         ArrayList<TypeCheval> lesTypesChevaux = (ArrayList)request.getAttribute("pLesTypesChevaux");
                         for (int i=0; i<lesTypesChevaux.size();i++){
@@ -108,7 +108,7 @@
                
                 
                 <label for="client">CLIENT </label>
-                <select name="client" size="5">
+                <select name="client" size="5" required="required">
                 <%
                         ArrayList<Client> lesClients = (ArrayList)request.getAttribute("pLesClients");
                         for (int i=0; i<lesClients.size();i++){
@@ -120,7 +120,7 @@
                 </select>
                 
                 <label for="pere">PERE DU CHEVAL </label>
-                <select name="pere" size="5">
+                <select name="pere" size="5" required="required">
                 <%
                         ArrayList<Cheval> lesChevauxPeres = (ArrayList)request.getAttribute("pLesChevauxMales");
                         for (int i=0; i<lesChevauxPeres.size();i++){
@@ -132,7 +132,7 @@
                 </select>
                 
                 <label for="mere">MERE DU CHEVAL </label>
-                <select name="mere" size="5">
+                <select name="mere" size="5" required="required">
                 <%
                         ArrayList<Cheval> lesChevauxMeres = (ArrayList)request.getAttribute("pLesChevauxFemelles");
                         for (int i=0; i<lesChevauxMeres.size();i++){

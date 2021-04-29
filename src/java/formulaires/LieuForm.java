@@ -67,6 +67,7 @@ public class LieuForm {
        unLieu.setNbBoxes(Integer.parseInt(nbBoxes));
         unLieu.setCommentaires(Commentaire);
         
+        
    
                
        

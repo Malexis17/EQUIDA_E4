@@ -74,11 +74,11 @@
     <center>
         <form class="form-inline" action="ajouterCategVente" method="POST">
                 <label for="code">CODE  </label>
-                <input id="code" type="text" name="code"  size="30" maxlength="5">
+                <input id="code" type="text" name="code"  size="30" maxlength="5" required="required">
                 </br>
                 
                 <label for="libelle">LIBELLE  </label>
-                <input id="libelle"  type="text"  name="libelle" size="30" maxlength="30">      
+                <input id="libelle"  type="text"  name="libelle" size="30" maxlength="30" required="required">      
                  </br>
                      <input type="submit" name="valider" id="valider" value="Valider"/>
         </form>

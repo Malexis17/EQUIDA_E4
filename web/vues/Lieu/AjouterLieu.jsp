@@ -69,15 +69,16 @@
                 <input id="id" type="text" name="id"  size="30" maxlength="3">-->
                 </br>
             <label for="ville">VILLE  </label>
-                <input id="ville" type="text" name="ville"  size="50" maxlength="50">
+                <input id="ville" type="text" name="ville"  size="50" maxlength="50" required="required">
                 </br>
         <label for="Nombre box"> NOMBRE BOX </label>
-                <input id="Nombre box" type="text" name="nbBoxes"  size="30" maxlength="50">
+        
+                <input id="Nombre box" type="number" name="nbBoxes" min="0" max="999" size="20" maxlength="3" required="required">
                 </br>
 
         <label for="Commentaire"> COMMENTAIRE </label>
 
-                <input id="commentaire" type="text" name="commentaire"  size="50" maxlength="50">
+        <input id="commentaire" type="text" name="commentaire"  size="50" maxlength="50" required="required">
                 </br>
         
         

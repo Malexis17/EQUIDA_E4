@@ -87,7 +87,7 @@ public class ServletVentes extends HttpServlet {
         
         // Récup et affichage par date décroissante de toutes les ventes   
           
-        if(url.equals("/ERROR500/ServletVentes/listerLesVentes"))
+        if(url.equals("/equida_Alexis/ServletVentes/listerLesVentes"))
         {  
             ArrayList<Vente> lesVentes = VenteDAO.getLesVentes(connection);
             request.setAttribute("pLesVentes", lesVentes);
@@ -95,7 +95,7 @@ public class ServletVentes extends HttpServlet {
         }
         
         // Récup et affichage des clients interessés par une certaine catégorie de ventes
-        if(url.equals("/ERROR500/ServletVentes/listerLesClients"))
+        if(url.equals("/equida_Alexis/ServletVentes/listerLesClients"))
         {  
            System.out.println("DANS LISTER LES CLIENTS");
             String codeCat = (String)request.getParameter("codeCat");
@@ -106,7 +106,7 @@ public class ServletVentes extends HttpServlet {
             getServletContext().getRequestDispatcher("/vues/ventes/listerLesClients.jsp").forward(request, response);
         }
         
-        if(url.equals("/ERROR500/ServletVentes/listerLesCourriels"))
+        if(url.equals("/equida_Alexis/ServletVentes/listerLesCourriels"))
         {  
            System.out.println("DANS LISTER LES COURRIELS");
             String idVente = (String)request.getParameter("idVente");
@@ -118,7 +118,7 @@ public class ServletVentes extends HttpServlet {
             getServletContext().getRequestDispatcher("/vues/ventes/listerLesCourriels.jsp").forward(request, response);
         }
         
-        if(url.equals("/ERROR500/ServletVentes/listerLesLots"))
+        if(url.equals("/equida_Alexis/ServletVentes/listerLesLots"))
         {  
            System.out.println("DANS LISTER LES LOTS");
             String idVente = (String)request.getParameter("idVente");

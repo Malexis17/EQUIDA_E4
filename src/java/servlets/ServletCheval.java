@@ -86,7 +86,7 @@ public class ServletCheval extends HttpServlet {
         
         // Récup et affichage par date décroissante de toutes les ventes   
           
-        if(url.equals("/ERROR500/ServletCheval/infoCheval"))
+        if(url.equals("/equida_Alexis/ServletCheval/infoCheval"))
         {  
            System.out.println("DANS INFO CHEVAL");
             String idCheval = (String)request.getParameter("idCheval");
@@ -97,7 +97,7 @@ public class ServletCheval extends HttpServlet {
             getServletContext().getRequestDispatcher("/vues/cheval/infoCheval.jsp").forward(request, response);
         }
         
-        if(url.equals("/ERROR500/ServletCheval/ajouterCheval"))
+        if(url.equals("/equida_Alexis/ServletCheval/ajouterCheval"))
         {                   
             ArrayList<Client> lesClients = ClientDAO.getLesClients(connection);
             request.setAttribute("pLesClients", lesClients);
@@ -115,7 +115,7 @@ public class ServletCheval extends HttpServlet {
            
             this.getServletContext().getRequestDispatcher("/vues/cheval/chevalAjouter.jsp" ).forward( request, response );
         }
-        if(url.equals("/ERROR500/ServletCheval/modifierCheval"))
+        if(url.equals("/equida_Alexis/ServletCheval/modifierCheval"))
         {
           String id = (String)request.getParameter("id");
           System.out.println(id);
@@ -154,7 +154,7 @@ public class ServletCheval extends HttpServlet {
                
         String url = request.getRequestURI();
         
-        if(url.equals("/ERROR500/ServletCheval/ajouterCheval")){
+        if(url.equals("/equida_Alexis/ServletCheval/ajouterCheval")){
             /* Préparation de l'objet formulaire */
            ChevalForm form = new ChevalForm();
 
@@ -192,7 +192,7 @@ public class ServletCheval extends HttpServlet {
            
         
         
-        if(url.equals("/ERROR500/ServletCheval/modifierCheval")){
+        if(url.equals("/equida_Alexis/ServletCheval/modifierCheval")){
 
             /* Préparation de l'objet formulaire */
            ChevalForm form = new ChevalForm();

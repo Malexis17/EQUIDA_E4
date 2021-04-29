@@ -75,29 +75,29 @@
             
         <form class="form-inline" action="ajouterClient" method="POST">
                 <label for="nom">NOM  </label>
-                <input id="nom" type="text" name="nom"  size="30" maxlength="30">
+                <input id="nom" type="text" name="nom"  size="30" maxlength="30" required="required">
                 </br>
                 
                 <label for="prenom">PRENOM  </label>
-                <input id="prenom"  type="text"  name="prenom" size="30" maxlength="30">      
+                <input id="prenom"  type="text"  name="prenom" size="30" maxlength="30" required="required">      
                  </br>
                 
                 <label for="rue">rue  </label>
-                <input id="rue"  type="text"  name="rue" size="30" maxlength="50">
+                <input id="rue"  type="text"  name="rue" size="30" maxlength="50" required="required">
                  </br>
                                
                 
                 <label for="copos">Code postal  </label>
-                <input id="copos"  type="text"  name="copos" size="30" maxlength="5">
+                <input id="copos"  type="text"  name="copos" size="30" maxlength="5" required="required">
                 </br>
                 
                 <label for="ville">Ville  </label>
-                <input id="ville"  type="text"  name="ville" size="40" maxlength="40">
+                <input id="ville"  type="text"  name="ville" size="40" maxlength="40" required="required">
                 </br>
                 
                 <%-- Champ Liste des pays --%>
                 <label for="pays">Pays  </label>
-                <select name="pays" id="choix_Pays" size="5"  >
+                <select name="pays" id="choix_Pays" size="5" required="required" >
                     <%
                         ArrayList<Pays> lesPays = (ArrayList)request.getAttribute("pLesPays");
                         for (int i=0; i<lesPays.size();i++){
@@ -111,7 +111,7 @@
                 </br>            
                 
                 <label for="categVente">Categorie Vente  </label>
-                <select name="categVente" size="5" multiple >
+                <select name="categVente" size="5" multiple required="required" >
                 <%
                         ArrayList<CategVente> lesCategVente = (ArrayList)request.getAttribute("pLesCategVente");
                         for (int i=0; i<lesCategVente.size();i++){
